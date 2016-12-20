@@ -26,7 +26,7 @@ const linter = new Linter(config);
 // prepare lookup
 const lintDirectories = argv._;
 
-const dirsToTemplates = lintDirectories.reduce((templates, directory) => {
+const templates = lintDirectories.reduce((templates, directory) => {
   const dirTemplates = walkSync(directory)
     .filter(file => path.extname(file) === '.hbs')
     .map(file => path.join(directory, file));
@@ -35,8 +35,6 @@ const dirsToTemplates = lintDirectories.reduce((templates, directory) => {
 
   return templates;
 }, []);
-
-const templates = [].concat.apply([], dirsToTemplates);
 
 // define statistics
 let errorsCount = 0;

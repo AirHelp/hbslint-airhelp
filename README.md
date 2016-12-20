@@ -8,11 +8,8 @@ This package provides cli to lint your project against config. It also provides 
 To run linter in your build environment, create npm script that runs provided `hbslint` cli against your project source.
 
 1. `hbslint app/templates app/components`
-2. Use `verbose` option to see check errors
-
-## To Do
-
-* Use `config` option to provide custom config path
+2. Use `verbose` option to check errors
+3. Use `config` option to provide custom rules configuration
 
 ## Contribution
 Please introduce changes in separate PRs.
