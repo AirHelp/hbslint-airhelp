@@ -26,15 +26,20 @@ const linter = new Linter(config);
 // prepare lookup
 const lintDirectories = argv._;
 
-const dirsToTemplates = lintDirectories.map(directory =>
-  walkSync(directory)
+const dirsToTemplates = lintDirectories.reduce((templates, directory) => {
+  const dirTemplates = walkSync(directory)
     .filter(file => path.extname(file) === '.hbs')
-    .map(file => path.join(directory, file))
-);
+    .map(file => path.join(directory, file));
+
+  templates.push(...dirTemplates);
+
+  return templates;
+}, []);
 
 const templates = [].concat.apply([], dirsToTemplates);
 
 // define statistics
+let errorsCount = 0;
 let errorFilesCount = 0;
 
 // process linting
@@ -46,6 +51,7 @@ templates.forEach(file => {
   });
 
   if (errors.length) {
+    errorsCount += errors.length;
     errorFilesCount++;
 
     if (isVerbose) {
@@ -71,7 +77,7 @@ templates.forEach(file => {
 });
 
 if (errorFilesCount) {
-  log('\n', chalk.yellow(`-> ${errorFilesCount} problems (${errorFilesCount} warnings)`));
+  log('\n', chalk.yellow(`-> ${errorsCount} problems (${errorsCount} warnings)`));
 
   // TODO change this to exitCode 1 after we fix most of bugs
   exitCode = 0;
@@ -79,6 +85,4 @@ if (errorFilesCount) {
   log(chalk.green('No warnings found'));
 }
 
-process.on('exit', () => {
-  process.exit(exitCode);
-});
+process.exit(exitCode);
