@@ -1,13 +1,20 @@
-'use strict';
+const path = require('path');
+const defaultConfigurations = require('../config/.template-lintrc');
 
-var defaultConfigurations = require('../config/.template-lintrc');
+function getConfigPath(argv) {
+  const configOptions = {};
 
-module.exports = function(argv) {
   if (argv.config) {
-    // TODO: allow using custom config file
+    Object.assign(configOptions, {
+      configPath: path.join(process.cwd(), argv.config),
+    });
   } else {
-    return {
+    Object.assign(configOptions, {
       config: defaultConfigurations,
-    };
+    });
   }
-};
+
+  return configOptions;
+}
+
+module.exports = getConfigPath;
