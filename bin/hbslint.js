@@ -26,14 +26,14 @@ const linter = new Linter(config);
 // prepare lookup
 const lintDirectories = argv._;
 
-const templates = lintDirectories.reduce((templates, directory) => {
+const templates = lintDirectories.reduce((currentTemplates, directory) => {
   const dirTemplates = walkSync(directory)
     .filter(file => path.extname(file) === '.hbs')
     .map(file => path.join(directory, file));
 
-  templates.push(...dirTemplates);
+  currentTemplates.push(...dirTemplates);
 
-  return templates;
+  return currentTemplates;
 }, []);
 
 // define statistics
