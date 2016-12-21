@@ -83,4 +83,6 @@ if (errorFilesCount) {
   log(chalk.green('No warnings found'));
 }
 
-process.exit(exitCode);
+process.on('exit', () => {
+  process.exit(exitCode);
+});
