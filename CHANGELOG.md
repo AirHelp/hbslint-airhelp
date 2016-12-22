@@ -1,0 +1,1 @@
+- initial features ([79d14e0](https://github.com/AirHelp/hbslint-airhelp/commit/79d14e0d40e1daea109f8119d05a5d08f150debe))
