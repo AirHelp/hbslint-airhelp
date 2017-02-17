@@ -4,7 +4,7 @@ module.exports = {
   rules: {
     'bare-strings': true,
     'inline-link-to': true,
+    'inline-styles': true,
   },
 };
 
-// TODO check why inline-styles rule is not working
