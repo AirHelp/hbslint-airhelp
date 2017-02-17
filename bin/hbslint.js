@@ -77,8 +77,7 @@ templates.forEach(file => {
 if (errorFilesCount) {
   log('\n', chalk.yellow(`-> ${errorsCount} problems (${errorsCount} warnings)`));
 
-  // TODO change this to exitCode 1 after we fix most of bugs
-  exitCode = 0;
+  exitCode = 1;
 } else {
   log(chalk.green('No warnings found'));
 }
