@@ -5,6 +5,7 @@ module.exports = {
     'bare-strings': true,
     'inline-link-to': true,
     'inline-styles': true,
+    'link-rel-noopener': false,
   },
 };
 
