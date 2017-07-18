@@ -7,7 +7,6 @@
   },
   "main": "bin/hbslint.js",
   "scripts": {
-    "changelog": "node_modules/.bin/changelog > CHANGELOG.md",
     "lint": "node_modules/.bin/eslint ."
   },
   "repository": {
