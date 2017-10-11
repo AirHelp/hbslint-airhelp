@@ -17,6 +17,7 @@ module.exports = {
     'style-concatenation': true,
     'triple-curlies': true,
     'unused-block-params': false,
+    'simple-unless': false,
   },
 };
 

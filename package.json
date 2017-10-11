@@ -1,6 +1,6 @@
 {
   "name": "hbslint-airhelp",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "AirHelp Handlebars Lint shareable cli and config",
   "bin": {
     "hbslint": "./bin/hbslint.js"
