@@ -11,6 +11,7 @@ module.exports = {
     'inline-link-to': true,
     'inline-styles': true,
     'invalid-interactive': true,
+    'no-shadowed-elements': true,
     'link-rel-noopener': false,
     'nested-interactive': true,
     'self-closing-void-elements': true,
