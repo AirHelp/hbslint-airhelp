@@ -14,11 +14,13 @@ module.exports = {
     'no-shadowed-elements': true,
     'link-rel-noopener': false,
     'nested-interactive': true,
+    'no-shadowed-elements': true,
     'self-closing-void-elements': true,
+    'simple-unless': false,
     'style-concatenation': true,
     'triple-curlies': true,
     'unused-block-params': false,
-    'simple-unless': false,
+    'quotes': 'single',
   },
 };
 
