@@ -20,7 +20,7 @@ module.exports = {
     'self-closing-void-elements': true,
     'simple-unless': false,
     'style-concatenation': true,
-    'quotes': 'single',
+    'quotes': 'double',
   },
 };
 
