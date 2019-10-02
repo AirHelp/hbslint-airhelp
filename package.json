@@ -1,6 +1,6 @@
 {
   "name": "hbslint-airhelp",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "description": "AirHelp Handlebars Lint shareable cli and config",
   "bin": {
     "hbslint": "./bin/hbslint.js"
@@ -32,7 +32,7 @@
   },
   "dependencies": {
     "chalk": "^2.0.1",
-    "ember-template-lint": "^0.7.2",
+    "ember-template-lint": "^0.8.23",
     "walk-sync": "^0.3.2",
     "yargs": "^8.0.2"
   }
