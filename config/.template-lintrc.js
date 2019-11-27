@@ -2,7 +2,6 @@ module.exports = {
   extends: 'recommended',
 
   rules: {
-    'attribute-indentation': true,
     'block-indentation': true,
     'deprecated-each-syntax': true,
     'deprecated-inline-view-helper': true,
