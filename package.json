@@ -34,7 +34,7 @@
   },
   "dependencies": {
     "chalk": "^2.0.1",
-    "ember-template-lint": "^0.8.23",
+    "ember-template-lint": "^1.14.0",
     "walk-sync": "^0.3.2",
     "yargs": "^13.3.0"
   },
