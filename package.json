@@ -33,6 +33,7 @@
   "dependencies": {
     "chalk": "^2.0.1",
     "ember-template-lint": "^0.8.23",
+    "minimist": "^1.2.3",
     "walk-sync": "^0.3.2",
     "yargs": "^13.3.0"
   }
